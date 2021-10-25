@@ -1,0 +1,33 @@
+{
+  "name": "eslint-config-svelte3-roboleary",
+  "author": "Rob O'Leary",
+  "version": "0.4.0",
+  "description": "My ESLint config for svelte3 apps.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robole/eslint-config-svelte3-roboleary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robole/eslint-config-svelte3-roboleary/issues"
+  },
+  "homepage": "https://github.com/robole/eslint-config-svelte3-roboleary#readme",
+  "license": "ISC",
+  "funding": {
+    "type": "individual",
+    "url": "https://ko-fi.com/roboleary"
+  },
+  "keywords": [
+    "javascript",
+    "ecmascript",
+    "eslint",
+    "node",
+    "lint",
+    "config",
+    "svelte"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-svelte3": ">=3.2.1",
+    "eslint-config-roboleary-base": ">=0.1.0"
+  }
+}
