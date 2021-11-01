@@ -5,7 +5,10 @@ module.exports = {
     mocha: true,
   },
   plugins: ["svelte3"],
-  extends: ["eslint-config-roboleary-base"],
+  extends: [
+    "eslint-config-roboleary-base",
+    "prettier", // makes sure this is last in the list
+  ],
   overrides: [
     {
       files: ["**/*.svelte"],
@@ -19,9 +22,6 @@ module.exports = {
     "import/order": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
-    quotes: "off",
-    "comma-dangle": "off",
-    "no-return-assign": "warn",
   },
   parserOptions: {
     ecmaVersion: 2020,
