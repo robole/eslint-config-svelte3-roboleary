@@ -12,8 +12,8 @@ Most of the custom rules I added are to avoid conflict between `eslint-plugin-sv
 
 ## Usage
 
-1. Install this package and ESLint as *devDependencies* with the command `npm i --save-dev eslint eslint-config-svelte3-roboleary`.
-1. Create an eslint config file in the root of your project directory e.g. _.eslintrc_. Add the following:
+1. Install this package and ESLint as *devDependencies* with the command `npm i -D eslint eslint-config-svelte3-roboleary`.
+1. Create an eslint config file in the root of your project directory e.g. _.eslintrc.json_. Add the following:
 
    ```json
    {
@@ -28,8 +28,45 @@ Most of the custom rules I added are to avoid conflict between `eslint-plugin-sv
 	```json
 	{
 		"scripts": {
-			"lint": "eslint .",
-			"lint:fix": "npm run lint -- --fix"
+			"lint-js": "npx eslint .",
+			"lint-js:fix": "npm run lint -- --fix"
 		},
 	}
 	```
+
+## VS Code configuration
+
+Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+Add the following to your user settings (*settings.json*), so that svelte files are linted:
+
+```json
+"eslint.probe": [
+	"javascript",
+	"javascriptreact",
+	"typescript",
+	"vue",
+	"svelte"
+],
+"eslint.validate": [
+	"javascript",
+	"javascriptreact",
+	"typescript",
+	"vue",
+	"svelte"
+]
+```
+
+I use the [Svelte for VS Code extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) for formatting code. It uses Prettier under the hood. This config ensures that Eslint's rules and Prettier's default rules don't interfere when formatting the code.
+
+I prefer to run linting and formatting as code actions. This way it is possible to run linting and formatting as a series of actions: lint first, then format. To be able to run formatting as a code action you need to install the [Format Code Action extension](https://marketplace.visualstudio.com/items?itemName=rohit-gohri.format-code-action&ssr=false#review-details).
+
+To lint and format your svelte code on save, you can update your user settings with the following:
+
+```json
+  "editor.formatOnSave": false,
+  "[svelte]": {
+	  "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll"],
+```
