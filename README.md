@@ -23,15 +23,13 @@ Most of the custom rules I added are to avoid conflict between `eslint-plugin-sv
 
    Alternatively, you can put a reference to the config in your _package.json_ under the property `eslintConfig`.
 
-1. You can add scripts to your _package.json_ to lint, fix, and format your code from the command-line.
+1. You can add the following `scripts` to your _package.json_ to lint and fix your code from the command-line.
 
 	```json
-	{
-		"scripts": {
-			"lint-js": "npx eslint .",
-			"lint-js:fix": "npm run lint -- --fix"
-		},
-	}
+  "scripts": {
+    "lint-js": "npx eslint .",
+    "lint-js:fix": "npm run lint -- --fix"
+	},
 	```
 
 ## VS Code configuration
@@ -64,9 +62,9 @@ I prefer to run linting and formatting as code actions. This way it is possible 
 To lint and format your svelte code on save, you can update your user settings with the following:
 
 ```json
-  "editor.formatOnSave": false,
-  "[svelte]": {
-	  "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll"],
+"editor.formatOnSave": false,
+"[svelte]": {
+	"editor.defaultFormatter": "svelte.svelte-vscode"
+},
+"editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll"],
 ```

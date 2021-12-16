@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-svelte3-roboleary",
   "author": "Rob O'Leary",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "My ESLint config for svelte3 apps.",
   "repository": {
     "type": "git",
