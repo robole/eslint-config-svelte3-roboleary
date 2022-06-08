@@ -13,7 +13,7 @@ Most of the custom rules I added are to avoid conflict between `eslint-plugin-sv
 ## Usage
 
 1. Install this package and ESLint as *devDependencies* with the command `npm i -D eslint eslint-config-svelte3-roboleary`.
-1. Create an eslint config file in the root of your project directory e.g. _.eslintrc.json_. Add the following:
+1. Create an eslint config file in the root of your project directory e.g. *.eslintrc.json*. Add the following:
 
    ```json
    {
@@ -21,15 +21,15 @@ Most of the custom rules I added are to avoid conflict between `eslint-plugin-sv
    }
    ```
 
-   Alternatively, you can put a reference to the config in your _package.json_ under the property `eslintConfig`.
+   Alternatively, you can put a reference to the config in your *package.json* under the property `eslintConfig`.
 
-1. You can add the following `scripts` to your _package.json_ to lint and fix your code from the command-line.
+1. You can add the following `scripts` to your *package.json* to lint and fix your code from the command-line.
 
 	```json
-  "scripts": {
-    "lint-js": "npx eslint .",
-    "lint-js:fix": "npm run lint -- --fix"
-	},
+		"scripts": {
+			"lint-js": "npx eslint .",
+			"lint-js:fix": "npm run lint -- --fix"
+		},
 	```
 
 ## VS Code configuration
